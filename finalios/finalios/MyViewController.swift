@@ -26,7 +26,7 @@ class MyViewController: UIViewController{
     var correctText: String = ""
     var correct: Int = 0
     var wrong: Int = 0
-    var pageIndex: Int = 0;
+    var pageIndex: Int = 0
     var question: String = ""
     var counter: Int = 60
 
@@ -42,7 +42,6 @@ class MyViewController: UIViewController{
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -72,7 +71,7 @@ class MyViewController: UIViewController{
     */
     @IBAction func button1next(_ sender: AnyObject) {
         let pvc = self.parent as! gamePageViewController
-        let answer = button1.currentTitle;
+        let answer = button1.currentTitle
         if answer == correctText{
             pvc.right += 1
         }
@@ -85,7 +84,7 @@ class MyViewController: UIViewController{
     }
     @IBAction func button2next(_ sender: AnyObject) {
         let pvc = self.parent as! gamePageViewController
-        let answer = button2.currentTitle;
+        let answer = button2.currentTitle
         if answer == correctText{
             pvc.right += 1
         }
@@ -114,7 +113,7 @@ class MyViewController: UIViewController{
     }
     @IBAction func button4next(_ sender: AnyObject) {
         let pvc = self.parent as! gamePageViewController
-        let answer = button4.currentTitle;
+        let answer = button4.currentTitle
         if answer == correctText{
             pvc.right += 1
         }
