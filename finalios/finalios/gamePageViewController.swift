@@ -8,6 +8,19 @@
 
 import UIKit
 
+
+extension Array
+{
+    /** Randomizes the order of an array's elements. */
+    mutating func shuffle()
+    {
+        for _ in 0..<10
+        {
+            sort { (_,_) in arc4random() < arc4random() }
+        }
+    }
+}
+
 class gamePageViewController: UIPageViewController, UIPageViewControllerDataSource  {
 
     var pvc: UIPageViewController!
@@ -17,6 +30,7 @@ class gamePageViewController: UIPageViewController, UIPageViewControllerDataSour
     var answer3: [String] = []
     var answer4: [String] = []
     var correct: [String] = []
+    var shuffled: [Int] = [0,1,2,3,4,5,6,7,8,9]
     var right: Int = 0
     var wrong: Int = 0
     var counter: Int = 60
@@ -45,6 +59,8 @@ class gamePageViewController: UIPageViewController, UIPageViewControllerDataSour
         answer4 = answer4Array as! [String]
         correct = correctAnswerArray as! [String]
         
+        shuffled.shuffle()
+        
         self.dataSource = self
         self.setViewControllers([getViewControllerAtIndex(index: 0)] as [UIViewController], direction: UIPageViewControllerNavigationDirection.forward, animated: false, completion: nil)
         // Do any additional setup after loading the view.
@@ -66,12 +82,12 @@ class gamePageViewController: UIPageViewController, UIPageViewControllerDataSour
     {
         // Create a new view controller and pass suitable data.
         let myViewController = storyboard?.instantiateViewController(withIdentifier: "MyViewController") as! MyViewController
-        myViewController.question = "\(test[index])"
-        myViewController.answer1Text = self.answer1[index]
-        myViewController.answer2Text = self.answer2[index]
-        myViewController.answer3Text = self.answer3[index]
-        myViewController.answer4Text = self.answer4[index]
-        myViewController.correctText = self.correct[index]
+        myViewController.question = "\(test[shuffled[index]])"
+        myViewController.answer1Text = self.answer1[shuffled[index]]
+        myViewController.answer2Text = self.answer2[shuffled[index]]
+        myViewController.answer3Text = self.answer3[shuffled[index]]
+        myViewController.answer4Text = self.answer4[shuffled[index]]
+        myViewController.correctText = self.correct[shuffled[index]]
         myViewController.pageIndex = index
         myViewController.correct = right
         myViewController.wrong = wrong
