@@ -3,7 +3,7 @@
 //  finalios
 //
 //  Created by Larry Baker on 11/27/16.
-//  Copyright © 2016 Matthew Baker. All rights reserved.
+//  Copyright © 2016 Matthew Baker and Todd Locker. All rights reserved.
 //
 
 import UIKit
@@ -104,7 +104,7 @@ class gamePageViewController: UIPageViewController, UIPageViewControllerDataSour
         {
             return nil
         }
-        index -= 1;
+        index -= 1
         return nil
     }
     
@@ -115,12 +115,12 @@ class gamePageViewController: UIPageViewController, UIPageViewControllerDataSour
     
         if (index == NSNotFound)
         {
-            return nil;
+            return nil
         }
         index += 1;
         if (index == test.count)
         {
-            return nil;
+            return nil
         }
         
         return nil

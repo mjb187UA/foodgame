@@ -70,7 +70,7 @@ class MyViewController: UIViewController{
         // Pass the selected object to the new view controller.
     }
     */
-    @IBAction func button1next(_ sender: Any) {
+    @IBAction func button1next(_ sender: AnyObject) {
         let pvc = self.parent as! gamePageViewController
         let answer = button1.currentTitle;
         if answer == correctText{
@@ -83,7 +83,7 @@ class MyViewController: UIViewController{
         pvc.counter = counter
         pvc.nextPageWithIndex(index: pageIndex)
     }
-    @IBAction func button2next(_ sender: Any) {
+    @IBAction func button2next(_ sender: AnyObject) {
         let pvc = self.parent as! gamePageViewController
         let answer = button2.currentTitle;
         if answer == correctText{
@@ -97,7 +97,7 @@ class MyViewController: UIViewController{
         pvc.nextPageWithIndex(index: pageIndex)
     }
     
-    @IBAction func button3next(_ sender: Any) {
+    @IBAction func button3next(_ sender: AnyObject) {
         let pvc = self.parent as! gamePageViewController
         let answer = button3.currentTitle;
         if answer == correctText{
@@ -112,7 +112,7 @@ class MyViewController: UIViewController{
         pvc.counter = counter
         pvc.nextPageWithIndex(index: pageIndex)
     }
-    @IBAction func button4next(_ sender: Any) {
+    @IBAction func button4next(_ sender: AnyObject) {
         let pvc = self.parent as! gamePageViewController
         let answer = button4.currentTitle;
         if answer == correctText{
