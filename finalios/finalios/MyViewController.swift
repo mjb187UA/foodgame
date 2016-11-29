@@ -3,7 +3,7 @@
 //  finalios
 //
 //  Created by Larry Baker on 11/27/16.
-//  Copyright © 2016 Matthew Baker. All rights reserved.
+//  Copyright © 2016 Matthew Baker, Todd Locker. All rights reserved.
 //
 
 import UIKit
@@ -69,6 +69,7 @@ class MyViewController: UIViewController{
         // Pass the selected object to the new view controller.
     }
     */
+    
     @IBAction func button1next(_ sender: AnyObject) {
         let pvc = self.parent as! gamePageViewController
         let answer = button1.currentTitle
@@ -82,6 +83,7 @@ class MyViewController: UIViewController{
         pvc.counter = counter
         pvc.nextPageWithIndex(index: pageIndex)
     }
+    
     @IBAction func button2next(_ sender: AnyObject) {
         let pvc = self.parent as! gamePageViewController
         let answer = button2.currentTitle
@@ -101,16 +103,15 @@ class MyViewController: UIViewController{
         let answer = button3.currentTitle;
         if answer == correctText{
             pvc.right += 1
-            print("\(pageIndex)")
         }
         else{
             pvc.wrong += 1
-            print("\(pageIndex)")
         }
         
         pvc.counter = counter
         pvc.nextPageWithIndex(index: pageIndex)
     }
+    
     @IBAction func button4next(_ sender: AnyObject) {
         let pvc = self.parent as! gamePageViewController
         let answer = button4.currentTitle

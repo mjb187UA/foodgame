@@ -3,11 +3,10 @@
 //  finalios
 //
 //  Created by Larry Baker on 11/27/16.
-//  Copyright © 2016 Matthew Baker and Todd Locker. All rights reserved.
+//  Copyright © 2016 Matthew Baker, Todd Locker. All rights reserved.
 //
 
 import UIKit
-
 
 extension Array
 {
@@ -78,16 +77,17 @@ class gamePageViewController: UIPageViewController, UIPageViewControllerDataSour
     */
     
     
-    func getViewControllerAtIndex(index: NSInteger) -> MyViewController
+    func getViewControllerAtIndex(index: NSInteger) -> UIViewController
     {
         // Create a new view controller and pass suitable data.
         let myViewController = storyboard?.instantiateViewController(withIdentifier: "MyViewController") as! MyViewController
-        /*
-        if(index > 9) {
-            print("No more questions")
-            return myViewController
+        
+        if(index > test.count-1) {
+            print("No more questions!!!")
+            let HomeVC = storyboard?.instantiateViewController(withIdentifier: "HomeViewController") as! HomeViewController
+            return HomeVC
         }
-        */
+        
         myViewController.question = "\(test[shuffled[index]])"
         myViewController.answer1Text = self.answer1[shuffled[index]]
         myViewController.answer2Text = self.answer2[shuffled[index]]

@@ -11,20 +11,21 @@ import UIKit
 class HomeViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate {
     
     @IBOutlet weak var difficultySelector: UIPickerView!
-    @IBOutlet weak var pickerLabel: UILabel!
+    @IBOutlet weak var playButton: UIButton!
     
     let pickerData = ["Easy","Medium","Hard"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         difficultySelector.dataSource = self
         difficultySelector.delegate = self
+        playButton.setTitle("Play Easy", for: .normal)
     }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
-
 
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
         return 1
@@ -39,7 +40,7 @@ class HomeViewController: UIViewController, UIPickerViewDataSource, UIPickerView
     }
     
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
-        pickerLabel.text = pickerData[row]
+        playButton.setTitle("Play "+pickerData[row], for: .normal)
     }
     
     func pickerView(_ pickerView: UIPickerView, attributedTitleForRow row: Int, forComponent component: Int) -> NSAttributedString? {

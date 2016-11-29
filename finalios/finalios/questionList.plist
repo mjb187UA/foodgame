@@ -2,7 +2,7 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <array>
-	<string>Is Cake?</string>
+	<string>What Is Cake?</string>
 	<string>What color is a banana?</string>
 	<string>What shape is an orange?</string>
 	<string>What is not a type of Cheese?</string>
@@ -10,7 +10,7 @@
 	<string>Which is not a fruit?</string>
 	<string>Which is not a vegitable?</string>
 	<string>Which color is a carrot?</string>
-	<string>Which one is doesn&apos;t fit?</string>
+	<string>Which one doesn&apos;t fit?</string>
 	<string>Which grows on a tree?</string>
 </array>
 </plist>
