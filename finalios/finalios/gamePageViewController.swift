@@ -82,6 +82,12 @@ class gamePageViewController: UIPageViewController, UIPageViewControllerDataSour
     {
         // Create a new view controller and pass suitable data.
         let myViewController = storyboard?.instantiateViewController(withIdentifier: "MyViewController") as! MyViewController
+        /*
+        if(index > 9) {
+            print("No more questions")
+            return myViewController
+        }
+        */
         myViewController.question = "\(test[shuffled[index]])"
         myViewController.answer1Text = self.answer1[shuffled[index]]
         myViewController.answer2Text = self.answer2[shuffled[index]]

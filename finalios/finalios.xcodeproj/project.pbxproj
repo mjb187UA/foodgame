@@ -18,6 +18,8 @@
 		3293FA2F1DEBC51100DE75FF /* Answer3List.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3293FA2E1DEBC51100DE75FF /* Answer3List.plist */; };
 		3293FA311DEBC52500DE75FF /* Answer4List.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3293FA301DEBC52500DE75FF /* Answer4List.plist */; };
 		3293FA331DEBC53D00DE75FF /* CorrectAnswerList.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3293FA321DEBC53D00DE75FF /* CorrectAnswerList.plist */; };
+		C3A2E1F01DED0398001E0A67 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3A2E1EF1DED0398001E0A67 /* HomeViewController.swift */; };
+		C3A2E1F21DED0E07001E0A67 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3A2E1F11DED0E07001E0A67 /* SettingsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +36,8 @@
 		3293FA2E1DEBC51100DE75FF /* Answer3List.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Answer3List.plist; sourceTree = "<group>"; };
 		3293FA301DEBC52500DE75FF /* Answer4List.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Answer4List.plist; sourceTree = "<group>"; };
 		3293FA321DEBC53D00DE75FF /* CorrectAnswerList.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = CorrectAnswerList.plist; sourceTree = "<group>"; };
+		C3A2E1EF1DED0398001E0A67 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		C3A2E1F11DED0E07001E0A67 /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,6 +72,8 @@
 			children = (
 				323A7E391DEB86C50019DCC6 /* AppDelegate.swift */,
 				323A7E411DEB86C50019DCC6 /* Main.storyboard */,
+				C3A2E1EF1DED0398001E0A67 /* HomeViewController.swift */,
+				C3A2E1F11DED0E07001E0A67 /* SettingsViewController.swift */,
 				323A7E511DEB89C90019DCC6 /* MyViewController.swift */,
 				323A7E4F1DEB87A40019DCC6 /* gamePageViewController.swift */,
 				323A7E441DEB86C50019DCC6 /* Assets.xcassets */,
@@ -162,6 +168,8 @@
 				323A7E3A1DEB86C50019DCC6 /* AppDelegate.swift in Sources */,
 				323A7E521DEB89C90019DCC6 /* MyViewController.swift in Sources */,
 				323A7E501DEB87A40019DCC6 /* gamePageViewController.swift in Sources */,
+				C3A2E1F21DED0E07001E0A67 /* SettingsViewController.swift in Sources */,
+				C3A2E1F01DED0398001E0A67 /* HomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
