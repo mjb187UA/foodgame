@@ -32,11 +32,14 @@ class gamePageViewController: UIPageViewController, UIPageViewControllerDataSour
     var shuffled: [Int] = [0,1,2,3,4,5,6,7,8,9]
     var right: Int = 0
     var wrong: Int = 0
-    var counter: Int = 60
+    var counter: Double = 60
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        
+        
+        
         let Qpath = Bundle.main.path(forResource: "questionList", ofType: "plist")
         let questionArray = NSArray(contentsOfFile: Qpath!)
         let A1path = Bundle.main.path(forResource: "Answer1List", ofType: "plist")
@@ -49,6 +52,7 @@ class gamePageViewController: UIPageViewController, UIPageViewControllerDataSour
         let answer4Array = NSArray(contentsOfFile: A4path!)
         let CApath = Bundle.main.path(forResource: "CorrectAnswerList", ofType: "plist")
         let correctAnswerArray = NSArray(contentsOfFile: CApath!)
+        
         
         
         test = questionArray as! [String] as NSArray
@@ -143,6 +147,7 @@ class gamePageViewController: UIPageViewController, UIPageViewControllerDataSour
         let nextVC = self.getViewControllerAtIndex(index: index+1)
         setViewControllers([nextVC], direction: .forward, animated: true, completion: nil)
     }
+    
 
     
 }
