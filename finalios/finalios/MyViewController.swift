@@ -28,7 +28,7 @@ class MyViewController: UIViewController{
     var wrong: Int = 0
     var pageIndex: Int = 0
     var question: String = ""
-    var counter: Int = 60
+    var counter: Double = 60
 
     
     
@@ -36,7 +36,7 @@ class MyViewController: UIViewController{
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        var timer = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(MyViewController.updateTimer), userInfo: nil, repeats: true)
+        var timer = Timer.scheduledTimer(timeInterval: 0.1, target: self, selector: #selector(MyViewController.updateTimer), userInfo: nil, repeats: true)
         
     }
 
@@ -53,7 +53,7 @@ class MyViewController: UIViewController{
         self.button2!.setTitle(answer2Text, for: UIControlState.normal)
         self.button3!.setTitle(answer3Text, for: UIControlState.normal)
         self.button4!.setTitle(answer4Text, for: UIControlState.normal)
-        self.timeLabel.text = String(counter)
+        self.timeLabel.text = String(Int(counter))
         
     }
     
@@ -128,7 +128,7 @@ class MyViewController: UIViewController{
     
     func updateTimer()
     {
-        counter -= 1
-        timeLabel.text = String(counter)
+        counter -= 0.1
+        timeLabel.text = String(Int(counter))
     }
 }
