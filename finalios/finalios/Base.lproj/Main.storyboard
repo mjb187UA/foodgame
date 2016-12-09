@@ -19,16 +19,12 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Settings" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wzN-0E-n2q">
-                                <frame key="frameInset" minX="110" minY="72" width="154" height="66"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Settings" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wzN-0E-n2q">
                                 <fontDescription key="fontDescription" type="system" pointSize="40"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TCE-Hn-2pJ">
-                                <frame key="frameInset" minX="101" minY="489" width="172" height="78"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TCE-Hn-2pJ">
                                 <color key="backgroundColor" red="0.32634568000000003" green="0.85457269700000005" blue="0.26712937269999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="23"/>
                                 <state key="normal" title="Save Changes">
@@ -40,6 +36,14 @@
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="0.8522576482636377" green="0.85457269703676253" blue="0.75137851505159059" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="TCE-Hn-2pJ" secondAttribute="trailing" constant="10" id="74w-fb-Cbr"/>
+                            <constraint firstItem="wzN-0E-n2q" firstAttribute="top" secondItem="RwL-us-0Ud" secondAttribute="bottom" constant="10" id="CB8-fg-1hc"/>
+                            <constraint firstItem="wzN-0E-n2q" firstAttribute="leading" secondItem="v0a-TE-jMd" secondAttribute="leadingMargin" constant="10" id="IsL-Kx-Ffc"/>
+                            <constraint firstItem="6Q6-SO-f0l" firstAttribute="top" secondItem="TCE-Hn-2pJ" secondAttribute="bottom" constant="10" id="NOq-Wj-Vur"/>
+                            <constraint firstItem="TCE-Hn-2pJ" firstAttribute="leading" secondItem="v0a-TE-jMd" secondAttribute="leadingMargin" constant="10" id="wyN-7L-t7E"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="wzN-0E-n2q" secondAttribute="trailing" constant="10" id="x0l-2P-6kl"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MVD-cU-5lk" userLabel="First Responder" sceneMemberID="firstResponder"/>
