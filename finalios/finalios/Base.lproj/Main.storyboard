@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -57,9 +58,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0qO-Qk-lrf">
-                                <frame key="frameInset" minX="6.93%" width="84.27%" height="13.29%" maxY="20"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0qO-Qk-lrf">
                                 <color key="backgroundColor" red="0.54097508919207171" green="1" blue="0.4791965374388063" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                 <state key="normal" title="Play">
@@ -69,9 +68,7 @@
                                     <segue destination="iXs-6u-oZP" kind="showDetail" id="5Q9-mF-ddl"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ccb-IG-j7J">
-                                <frame key="frameInset" minX="26" minY="74" width="74" height="36"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ccb-IG-j7J">
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <state key="normal" title="Settings">
                                     <color key="titleColor" red="0.99148841531827403" green="0.25462814466942507" blue="0.24937050431102861" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -80,19 +77,36 @@
                                     <segue destination="fFN-Rc-9gF" kind="show" identifier="SetingsSegue" id="aWQ-lG-Fbq"/>
                                 </connections>
                             </button>
-                            <pickerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="xdb-Ab-rEE">
+                            <pickerView contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="xdb-Ab-rEE">
                                 <frame key="frameInset" minY="337" height="216"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                             </pickerView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Food Trivia!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="C9m-GV-BjR">
-                                <frame key="frameInset" minX="105" minY="136" width="165" height="36"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="32"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Food Trivia!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="C9m-GV-BjR">
+                                <fontDescription key="fontDescription" type="system" pointSize="35"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Highscore: " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7hy-q9-1sI">
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <color key="backgroundColor" red="0.65846122231909143" green="0.80081963318015281" blue="0.98970383409999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="ccb-IG-j7J" firstAttribute="top" secondItem="kUt-50-eJT" secondAttribute="bottom" constant="10" id="2iq-NI-Ckf"/>
+                            <constraint firstItem="xdb-Ab-rEE" firstAttribute="top" relation="greaterThanOrEqual" secondItem="7hy-q9-1sI" secondAttribute="bottom" constant="20" id="4Hx-dv-git"/>
+                            <constraint firstItem="C9m-GV-BjR" firstAttribute="leading" secondItem="HQ6-Dn-wpK" secondAttribute="leadingMargin" constant="20" id="5ml-o1-hUc"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="C9m-GV-BjR" secondAttribute="trailing" constant="20" id="HBN-Wt-LGD"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="0qO-Qk-lrf" secondAttribute="trailing" constant="10" id="HaW-qV-hVI"/>
+                            <constraint firstItem="0qO-Qk-lrf" firstAttribute="leading" secondItem="HQ6-Dn-wpK" secondAttribute="leadingMargin" constant="10" id="OaF-9Z-dgY"/>
+                            <constraint firstItem="7hy-q9-1sI" firstAttribute="leading" secondItem="HQ6-Dn-wpK" secondAttribute="leadingMargin" constant="20" id="TUx-Na-GB5"/>
+                            <constraint firstItem="7hy-q9-1sI" firstAttribute="top" secondItem="C9m-GV-BjR" secondAttribute="bottom" constant="30" id="bd3-sm-vMv"/>
+                            <constraint firstItem="ccb-IG-j7J" firstAttribute="leading" secondItem="HQ6-Dn-wpK" secondAttribute="leadingMargin" constant="10" id="gme-Ix-uny"/>
+                            <constraint firstItem="tWJ-JJ-hRy" firstAttribute="top" secondItem="0qO-Qk-lrf" secondAttribute="bottom" constant="10" id="l0G-mx-A8i"/>
+                            <constraint firstItem="0qO-Qk-lrf" firstAttribute="top" secondItem="xdb-Ab-rEE" secondAttribute="bottom" constant="20" id="lPn-qm-je1"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="7hy-q9-1sI" secondAttribute="trailing" constant="20" id="qYW-18-p42"/>
+                            <constraint firstItem="C9m-GV-BjR" firstAttribute="top" secondItem="kUt-50-eJT" secondAttribute="bottom" constant="72" id="szS-yh-qaH"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="kDk-cQ-jUi"/>
                     <connections>

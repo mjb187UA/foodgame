@@ -82,8 +82,14 @@ class gamePageViewController: UIPageViewController, UIPageViewControllerDataSour
         // Create a new view controller and pass suitable data.
         let myViewController = storyboard?.instantiateViewController(withIdentifier: "MyViewController") as! MyViewController
         
+        print("index: \(index)")
+        print("test count: \(test.count-1)")
         if(index > test.count-1) {
             print("No more questions!!!")
+            let path = Bundle.main.path(forResource: "user", ofType:"plist")
+            let HS = NSArray(contentsOfFile: path!)
+            print(HS)
+            
             let HomeVC = storyboard?.instantiateViewController(withIdentifier: "HomeViewController") as! HomeViewController
             return HomeVC
         }
