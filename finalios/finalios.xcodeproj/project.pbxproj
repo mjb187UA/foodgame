@@ -18,6 +18,8 @@
 		3293FA2F1DEBC51100DE75FF /* Answer3List.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3293FA2E1DEBC51100DE75FF /* Answer3List.plist */; };
 		3293FA311DEBC52500DE75FF /* Answer4List.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3293FA301DEBC52500DE75FF /* Answer4List.plist */; };
 		3293FA331DEBC53D00DE75FF /* CorrectAnswerList.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3293FA321DEBC53D00DE75FF /* CorrectAnswerList.plist */; };
+		4DFE3D0A1DFF289B00F76B4E /* AddViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DFE3D091DFF289B00F76B4E /* AddViewController.swift */; };
+		4DFE3D0C1DFF2F1900F76B4E /* lol.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4DFE3D0B1DFF2F1900F76B4E /* lol.plist */; };
 		C38F112B1DFB3F5000EE484A /* user.plist in Resources */ = {isa = PBXBuildFile; fileRef = C38F112A1DFB3F5000EE484A /* user.plist */; };
 		C3A2E1F01DED0398001E0A67 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3A2E1EF1DED0398001E0A67 /* HomeViewController.swift */; };
 		C3A2E1F21DED0E07001E0A67 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3A2E1F11DED0E07001E0A67 /* SettingsViewController.swift */; };
@@ -37,6 +39,8 @@
 		3293FA2E1DEBC51100DE75FF /* Answer3List.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Answer3List.plist; sourceTree = "<group>"; };
 		3293FA301DEBC52500DE75FF /* Answer4List.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Answer4List.plist; sourceTree = "<group>"; };
 		3293FA321DEBC53D00DE75FF /* CorrectAnswerList.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = CorrectAnswerList.plist; sourceTree = "<group>"; };
+		4DFE3D091DFF289B00F76B4E /* AddViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AddViewController.swift; path = ../AddViewController.swift; sourceTree = "<group>"; };
+		4DFE3D0B1DFF2F1900F76B4E /* lol.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = lol.plist; sourceTree = "<group>"; };
 		C38F112A1DFB3F5000EE484A /* user.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = user.plist; sourceTree = "<group>"; };
 		C3A2E1EF1DED0398001E0A67 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		C3A2E1F11DED0E07001E0A67 /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
@@ -72,6 +76,7 @@
 		323A7E381DEB86C50019DCC6 /* finalios */ = {
 			isa = PBXGroup;
 			children = (
+				4DFE3D091DFF289B00F76B4E /* AddViewController.swift */,
 				323A7E391DEB86C50019DCC6 /* AppDelegate.swift */,
 				323A7E411DEB86C50019DCC6 /* Main.storyboard */,
 				C3A2E1EF1DED0398001E0A67 /* HomeViewController.swift */,
@@ -80,6 +85,7 @@
 				323A7E4F1DEB87A40019DCC6 /* gamePageViewController.swift */,
 				323A7E441DEB86C50019DCC6 /* Assets.xcassets */,
 				323A7E491DEB86C50019DCC6 /* Info.plist */,
+				4DFE3D0B1DFF2F1900F76B4E /* lol.plist */,
 				3293FA281DEBC4E600DE75FF /* questionList.plist */,
 				3293FA2A1DEBC4F400DE75FF /* Answer1List.plist */,
 				3293FA2C1DEBC50400DE75FF /* Answer2List.plist */,
@@ -151,6 +157,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3293FA2B1DEBC4F400DE75FF /* Answer1List.plist in Resources */,
+				4DFE3D0C1DFF2F1900F76B4E /* lol.plist in Resources */,
 				323A7E451DEB86C50019DCC6 /* Assets.xcassets in Resources */,
 				3293FA311DEBC52500DE75FF /* Answer4List.plist in Resources */,
 				323A7E431DEB86C50019DCC6 /* Main.storyboard in Resources */,
@@ -171,6 +178,7 @@
 			files = (
 				323A7E3A1DEB86C50019DCC6 /* AppDelegate.swift in Sources */,
 				323A7E521DEB89C90019DCC6 /* MyViewController.swift in Sources */,
+				4DFE3D0A1DFF289B00F76B4E /* AddViewController.swift in Sources */,
 				323A7E501DEB87A40019DCC6 /* gamePageViewController.swift in Sources */,
 				C3A2E1F21DED0E07001E0A67 /* SettingsViewController.swift in Sources */,
 				C3A2E1F01DED0398001E0A67 /* HomeViewController.swift in Sources */,

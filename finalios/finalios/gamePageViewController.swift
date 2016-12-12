@@ -13,7 +13,7 @@ extension Array
     /** Randomizes the order of an array's elements. */
     mutating func shuffle()
     {
-        for _ in 0..<10
+        for _ in 0..<14
         {
             sort { (_,_) in arc4random() < arc4random() }
         }
@@ -29,7 +29,7 @@ class gamePageViewController: UIPageViewController, UIPageViewControllerDataSour
     var answer3: [String] = []
     var answer4: [String] = []
     var correct: [String] = []
-    var shuffled: [Int] = [0,1,2,3,4,5,6,7,8,9]
+    var shuffled: [Int] = [0,1,2,3,4,5,6,7,8,9,10,11,12,13,14]
     var right: Int = 0
     var wrong: Int = 0
     var counter: Double = 60
@@ -40,7 +40,7 @@ class gamePageViewController: UIPageViewController, UIPageViewControllerDataSour
         
         
         
-        let Qpath = Bundle.main.path(forResource: "questionList", ofType: "plist")
+        /*let Qpath = Bundle.main.path(forResource: "questionList", ofType: "plist")
         let questionArray = NSArray(contentsOfFile: Qpath!)
         let A1path = Bundle.main.path(forResource: "Answer1List", ofType: "plist")
         let answer1Array = NSArray(contentsOfFile: A1path!)
@@ -51,8 +51,22 @@ class gamePageViewController: UIPageViewController, UIPageViewControllerDataSour
         let A4path = Bundle.main.path(forResource: "Answer4List", ofType: "plist")
         let answer4Array = NSArray(contentsOfFile: A4path!)
         let CApath = Bundle.main.path(forResource: "CorrectAnswerList", ofType: "plist")
-        let correctAnswerArray = NSArray(contentsOfFile: CApath!)
+        let correctAnswerArray = NSArray(contentsOfFile: CApath!)*/
         
+        
+        let paths = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true)
+        let url1 = URL(fileURLWithPath: paths[0]).appendingPathComponent("questionList.plist")
+        let url2 = URL(fileURLWithPath: paths[0]).appendingPathComponent("Answer1List.plist")
+        let url3 = URL(fileURLWithPath: paths[0]).appendingPathComponent("Answer2List.plist")
+        let url4 = URL(fileURLWithPath: paths[0]).appendingPathComponent("Answer3List.plist")
+        let url5 = URL(fileURLWithPath: paths[0]).appendingPathComponent("Answer4List.plist")
+        let url6 = URL(fileURLWithPath: paths[0]).appendingPathComponent("CorrectAnswerList.plist")
+        let questionArray = NSArray(contentsOf: url1)
+        let answer1Array = NSArray(contentsOf: url2)
+        let answer2Array = NSArray(contentsOf: url3)
+        let answer3Array = NSArray(contentsOf: url4)
+        let answer4Array = NSArray(contentsOf: url5)
+        let correctAnswerArray = NSArray(contentsOf: url6)
         
         
         test = questionArray as! [String] as NSArray
