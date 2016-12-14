@@ -15,27 +15,19 @@ class AddViewController: UIViewController {
     @IBOutlet weak var a2label: UITextField!
     @IBOutlet weak var a3label: UITextField!
     @IBOutlet weak var a4label: UITextField!
+    @IBOutlet weak var switcha1: UISwitch!
+    @IBOutlet weak var switcha2: UISwitch!
+    @IBOutlet weak var switcha3: UISwitch!
+    @IBOutlet weak var switcha4: UISwitch!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
     @IBAction func addToPlist(_ sender: AnyObject) {
         
         /*let paths = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true)
@@ -195,4 +187,61 @@ class AddViewController: UIViewController {
         
     }
 
+    @IBAction func switcha1Change(_ sender: UISwitch) {
+        if(switcha1.isOn) {
+            switcha1.setOn(false, animated: true)
+            switcha2.setOn(false, animated: true)
+            switcha3.setOn(false, animated: true)
+            switcha4.setOn(false, animated: true)
+        }else {
+            switcha1.setOn(true, animated: true)
+            switcha2.setOn(false, animated: true)
+            switcha3.setOn(false, animated: true)
+            switcha4.setOn(false, animated: true)
+        }
+    }
+    
+    @IBAction func switcha2Change(_ sender: UISwitch) {
+        if(switcha2.isOn) {
+            switcha1.setOn(false, animated: true)
+            switcha2.setOn(false, animated: true)
+            switcha3.setOn(false, animated: true)
+            switcha4.setOn(false, animated: true)
+        }else {
+            switcha1.setOn(false, animated: true)
+            switcha2.setOn(true, animated: true)
+            switcha3.setOn(false, animated: true)
+            switcha4.setOn(false, animated: true)
+        }
+    }
+    
+    @IBAction func switch3Change(_ sender: UISwitch) {
+        if(switcha3.isOn) {
+            switcha1.setOn(false, animated: true)
+            switcha2.setOn(false, animated: true)
+            switcha3.setOn(false, animated: true)
+            switcha4.setOn(false, animated: true)
+        }else {
+            switcha1.setOn(false, animated: true)
+            switcha2.setOn(false, animated: true)
+            switcha3.setOn(true, animated: true)
+            switcha4.setOn(false, animated: true)
+        }
+    }
+    
+    @IBAction func switch4Change(_ sender: UISwitch) {
+        if(switcha4.isOn) {
+            switcha1.setOn(false, animated: true)
+            switcha2.setOn(false, animated: true)
+            switcha3.setOn(false, animated: true)
+            switcha4.setOn(false, animated: true)
+        }else {
+            switcha1.setOn(false, animated: true)
+            switcha2.setOn(false, animated: true)
+            switcha3.setOn(false, animated: true)
+            switcha4.setOn(true, animated: true)
+        }
+    }
+    
+    
 }
