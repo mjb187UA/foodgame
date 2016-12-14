@@ -27,8 +27,6 @@ class HomeViewController: UIViewController, UIPickerViewDataSource, UIPickerView
             check()
         }
         
-        
-        
         difficultySelector.dataSource = self
         difficultySelector.delegate = self
         playButton.setTitle("Play Easy", for: .normal)
