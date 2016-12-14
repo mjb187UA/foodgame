@@ -36,7 +36,6 @@
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5wG-AF-WKK">
                                 <frame key="frameInset" minX="62" minY="479" width="163" height="75"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="1" green="0.24043751054152041" blue="0.24109806581655857" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <state key="normal" title="Button"/>
                                 <connections>
@@ -399,7 +398,39 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CDW-iM-BK5" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1210.4000000000001" y="-1759.0704647676164"/>
+            <point key="canvasLocation" x="1385" y="-1757"/>
+        </scene>
+        <!--End Game View Controller-->
+        <scene sceneID="1zy-Sw-Pbv">
+            <objects>
+                <viewController storyboardIdentifier="endGameViewController" id="YoS-gL-4ox" customClass="endGameViewController" customModule="finalios" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="4sK-O5-7Wu"/>
+                        <viewControllerLayoutGuide type="bottom" id="pfB-cB-5zN"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="oHz-Pe-Smd">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2IL-RY-PbD">
+                                <frame key="frameInset" minX="81" minY="464" width="212" height="87"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="1" green="0.96339715861208464" blue="0.0049260025820160314" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="Return Home"/>
+                                <connections>
+                                    <segue destination="OIp-AV-af0" kind="show" id="LrQ-Qr-cMS"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.26095339389154792" green="0.59792500786066449" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </view>
+                    <connections>
+                        <segue destination="8L3-ht-QGo" kind="showDetail" id="viO-ii-6Wp"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="otx-ZU-qDj" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2799.1999999999998" y="-1957.8710644677662"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="CZ2-M4-Iy4">
@@ -422,5 +453,6 @@
     </scenes>
     <inferredMetricsTieBreakers>
         <segue reference="mRQ-df-HNK"/>
+        <segue reference="LrQ-Qr-cMS"/>
     </inferredMetricsTieBreakers>
 </document>
