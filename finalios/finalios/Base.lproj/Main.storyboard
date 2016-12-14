@@ -61,6 +61,14 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vQL-vK-y8l">
+                                <color key="backgroundColor" red="1" green="0.088748623865425702" blue="0.89288893546691528" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <state key="normal" title="Clear Custon Questions"/>
+                                <connections>
+                                    <action selector="clear:" destination="fFN-Rc-9gF" eventType="touchUpInside" id="pTX-pg-igl"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.8522576482636377" green="0.85457269703676253" blue="0.75137851505159059" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -70,7 +78,10 @@
                             <constraint firstItem="6Q6-SO-f0l" firstAttribute="top" secondItem="TCE-Hn-2pJ" secondAttribute="bottom" constant="10" id="NOq-Wj-Vur"/>
                             <constraint firstItem="wzN-0E-n2q" firstAttribute="top" secondItem="RwL-us-0Ud" secondAttribute="bottom" constant="10" id="NbQ-vV-rkb"/>
                             <constraint firstItem="TCE-Hn-2pJ" firstAttribute="top" secondItem="5wG-AF-WKK" secondAttribute="bottom" constant="50" id="Npa-ze-uOY"/>
+                            <constraint firstItem="5wG-AF-WKK" firstAttribute="top" secondItem="vQL-vK-y8l" secondAttribute="bottom" constant="50" id="ZJD-Jk-gLF"/>
                             <constraint firstItem="5wG-AF-WKK" firstAttribute="leading" secondItem="v0a-TE-jMd" secondAttribute="leadingMargin" constant="10" id="e7h-fs-DPn"/>
+                            <constraint firstItem="vQL-vK-y8l" firstAttribute="leading" secondItem="v0a-TE-jMd" secondAttribute="leadingMargin" constant="10" id="pMq-eG-igL"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="vQL-vK-y8l" secondAttribute="trailing" constant="10" id="tM0-SE-myt"/>
                             <constraint firstItem="TCE-Hn-2pJ" firstAttribute="leading" secondItem="v0a-TE-jMd" secondAttribute="leadingMargin" constant="10" id="wyN-7L-t7E"/>
                             <constraint firstAttribute="trailingMargin" secondItem="wzN-0E-n2q" secondAttribute="trailing" constant="10" id="x0l-2P-6kl"/>
                         </constraints>
@@ -460,10 +471,19 @@
                                     <segue destination="OIp-AV-af0" kind="show" id="LrQ-Qr-cMS"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="M0Y-J5-MSE">
+                                <frame key="frameInset" minX="94" minY="85" width="186" height="73"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="tableCellGroupedBackgroundColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="0.26095339389154792" green="0.59792500786066449" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
                     <connections>
+                        <outlet property="testlabel" destination="M0Y-J5-MSE" id="dHi-i1-uep"/>
                         <segue destination="8L3-ht-QGo" kind="showDetail" id="viO-ii-6Wp"/>
                     </connections>
                 </viewController>
@@ -491,7 +511,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="mRQ-df-HNK"/>
         <segue reference="LrQ-Qr-cMS"/>
+        <segue reference="mRQ-df-HNK"/>
     </inferredMetricsTieBreakers>
 </document>
