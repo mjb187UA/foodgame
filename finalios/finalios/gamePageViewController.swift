@@ -79,7 +79,7 @@ class gamePageViewController: UIPageViewController, UIPageViewControllerDataSour
         answer4 = answer4Array as! [String]
         correct = correctAnswerArray as! [String]
         
-        let number = (questionArray?.count)! as Int
+        let number = ((questionArray?.count)!) - 1 as Int
         
         for x in 0...number {
             shuffled.append(x)
