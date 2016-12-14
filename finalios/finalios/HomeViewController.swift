@@ -20,6 +20,48 @@ class HomeViewController: UIViewController, UIPickerViewDataSource, UIPickerView
         
         let paths = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true)
         let url1 = URL(fileURLWithPath: paths[0]).appendingPathComponent("questionList.plist")
+        let array11 = NSMutableArray(contentsOf: url1)
+        
+        if(array11 == nil)
+        {
+            check()
+        }
+        
+        difficultySelector.dataSource = self
+        difficultySelector.delegate = self
+        playButton.setTitle("Play Easy", for: .normal)
+    }
+    
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+    }
+
+    func numberOfComponents(in pickerView: UIPickerView) -> Int {
+        return 1
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+        return pickerData.count
+    }
+
+    func pickerView(_ ckerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+        return pickerData[row]
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+        playButton.setTitle("Play "+pickerData[row], for: .normal)
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, attributedTitleForRow row: Int, forComponent component: Int) -> NSAttributedString? {
+        let titleData = pickerData[row]
+        let myTitle = NSAttributedString(string: titleData, attributes: [NSFontAttributeName:UIFont(name: "Georgia", size: 15.0)!,NSForegroundColorAttributeName:UIColor.blue])
+        return myTitle
+    }
+    
+    func check()
+    {
+        let paths = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true)
+        let url1 = URL(fileURLWithPath: paths[0]).appendingPathComponent("questionList.plist")
         let url2 = URL(fileURLWithPath: paths[0]).appendingPathComponent("Answer1List.plist")
         let url3 = URL(fileURLWithPath: paths[0]).appendingPathComponent("Answer2List.plist")
         let url4 = URL(fileURLWithPath: paths[0]).appendingPathComponent("Answer3List.plist")
@@ -92,34 +134,6 @@ class HomeViewController: UIViewController, UIPickerViewDataSource, UIPickerView
         }
         
         
-        difficultySelector.dataSource = self
-        difficultySelector.delegate = self
-        playButton.setTitle("Play Easy", for: .normal)
-    }
-    
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-    }
-
-    func numberOfComponents(in pickerView: UIPickerView) -> Int {
-        return 1
-    }
-    
-    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
-        return pickerData.count
-    }
-
-    func pickerView(_ ckerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
-        return pickerData[row]
-    }
-    
-    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
-        playButton.setTitle("Play "+pickerData[row], for: .normal)
-    }
-    
-    func pickerView(_ pickerView: UIPickerView, attributedTitleForRow row: Int, forComponent component: Int) -> NSAttributedString? {
-        let titleData = pickerData[row]
-        let myTitle = NSAttributedString(string: titleData, attributes: [NSFontAttributeName:UIFont(name: "Georgia", size: 15.0)!,NSForegroundColorAttributeName:UIColor.blue])
-        return myTitle
+        print("I WAS RAN")
     }
 }

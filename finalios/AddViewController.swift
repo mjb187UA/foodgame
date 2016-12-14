@@ -68,7 +68,7 @@ class AddViewController: UIViewController {
     
         //print(url2)
         
-        let Qpath = Bundle.main.path(forResource: "questionList", ofType: "plist")
+        /*let Qpath = Bundle.main.path(forResource: "questionList", ofType: "plist")
         let questionArray = NSArray(contentsOfFile: Qpath!)
         
         let A1path = Bundle.main.path(forResource: "Answer1List", ofType: "plist")
@@ -80,7 +80,7 @@ class AddViewController: UIViewController {
         let A4path = Bundle.main.path(forResource: "Answer4List", ofType: "plist")
         let answer4Array = NSArray(contentsOfFile: A4path!)
         let CApath = Bundle.main.path(forResource: "CorrectAnswerList", ofType: "plist")
-        let correctAnswerArray = NSArray(contentsOfFile: CApath!)
+        let correctAnswerArray = NSArray(contentsOfFile: CApath!)*/
             
    
         
@@ -100,7 +100,7 @@ class AddViewController: UIViewController {
         /*let array1 = NSMutableArray(contentsOf: url1)
         let array2= NSMutableArray(contentsOf: url4)!*/
         
-        let array1:NSMutableArray = questionArray as! NSMutableArray
+        /*let array1:NSMutableArray = questionArray as! NSMutableArray
         let array2:NSMutableArray = answer1Array  as! NSMutableArray
         let array3:NSMutableArray = answer2Array as! NSMutableArray
         let array4:NSMutableArray = answer3Array as! NSMutableArray
@@ -129,7 +129,7 @@ class AddViewController: UIViewController {
             if !((array6.write(to: url6, atomically: true))) {
                 print("Error writing plist to \(url4)")
             }
-        }
+        }*/
         
         //questions?.write(to: url, atomically: true)
         
@@ -171,6 +171,13 @@ class AddViewController: UIViewController {
             }
         }
         
+        /*array11?.write(to: url1, atomically: true)
+        array22?.write(to: url1, atomically: true)
+        array33?.write(to: url1, atomically: true)
+        array44?.write(to: url1, atomically: true)
+        array55?.write(to: url1, atomically: true)
+        array66?.write(to: url1, atomically: true)*/
+        
         
         print(array11)
         print(array22)
@@ -178,6 +185,13 @@ class AddViewController: UIViewController {
         print(array44)
         print(array55)
         print(array66)
+        
+        print("ARRAY1:  \(array11?.count)")
+        print("ARRAY2:  \(array22?.count)")
+        print("ARRAY3:  \(array33?.count)")
+        print("ARRAY4:  \(array44?.count)")
+        print("ARRAY5:  \(array55?.count)")
+        print("ARRAY6:  \(array66?.count)")
         
     }
 

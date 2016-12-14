@@ -79,7 +79,7 @@ class gamePageViewController: UIPageViewController, UIPageViewControllerDataSour
         answer4 = answer4Array as! [String]
         correct = correctAnswerArray as! [String]
         
-        let number = (questionArray?.count)! as Int
+        let number = ((questionArray?.count)!) - 1 as Int
         
         for x in 0...number {
             shuffled.append(x)
@@ -114,11 +114,8 @@ class gamePageViewController: UIPageViewController, UIPageViewControllerDataSour
         print("test count: \(test.count-1)")
         if(index > test.count-1) {
             print("No more questions!!!")
-            let path = Bundle.main.path(forResource: "user", ofType:"plist")
-            let HS = NSArray(contentsOfFile: path!)
-            print(HS)
             
-            let HomeVC = storyboard?.instantiateViewController(withIdentifier: "HomeViewController") as! HomeViewController
+            let HomeVC = storyboard?.instantiateViewController(withIdentifier: "endGameViewController") as! endGameViewController
             return HomeVC
         }
         
