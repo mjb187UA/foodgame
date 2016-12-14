@@ -30,6 +30,7 @@ class AddViewController: UIViewController {
     
     @IBAction func addToPlist(_ sender: AnyObject) {
         
+        
         /*let paths = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true)
         let url = URL(fileURLWithPath: paths[0]).appendingPathComponent("customQuestions")
         
@@ -135,12 +136,26 @@ class AddViewController: UIViewController {
         let array55 = NSMutableArray(contentsOf: url5)
         let array66 = NSMutableArray(contentsOf: url6)
         
-        array11?.add("test1")
-        array22?.add("test2")
-        array33?.add("test3")
-        array44?.add("test4")
-        array55?.add("test5")
-        array66?.add("test6")
+        array11?.add(self.qlabel.text)
+        array22?.add(self.a1label.text)
+        array33?.add(self.a2label.text)
+        array44?.add(self.a3label.text)
+        array55?.add(self.a4label.text)
+        if(switcha1.isOn) {
+            array66?.add(self.a1label.text)
+        }
+        else if(switcha2.isOn) {
+            array66?.add(self.a2label.text)
+        }
+        else if(switcha3.isOn) {
+            array66?.add(self.a3label.text)
+        }
+        else if(switcha4.isOn) {
+            array66?.add(self.a4label.text)
+        }
+        else {
+            return
+        }
         
         DispatchQueue(label:"matthew.finalios").async {
             if !((array11?.write(to: url1, atomically: true))!) {
