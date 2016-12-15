@@ -154,9 +154,26 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Rtu-XM-YCs"/>
-                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Ict-Ph-VCE"/>
-                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="q1q-W7-1qK"/>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="zkM-Z6-VjF">
+                                <connections>
+                                    <action selector="switcha1Change:" destination="V1D-dz-NhE" eventType="valueChanged" id="gVK-ku-ag5"/>
+                                </connections>
+                            </switch>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Rtu-XM-YCs">
+                                <connections>
+                                    <action selector="switcha2Change:" destination="V1D-dz-NhE" eventType="valueChanged" id="00L-Fr-cUZ"/>
+                                </connections>
+                            </switch>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Ict-Ph-VCE">
+                                <connections>
+                                    <action selector="switch3Change:" destination="V1D-dz-NhE" eventType="valueChanged" id="O1C-pr-4gc"/>
+                                </connections>
+                            </switch>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="q1q-W7-1qK">
+                                <connections>
+                                    <action selector="switch4Change:" destination="V1D-dz-NhE" eventType="valueChanged" id="ONQ-wP-Eck"/>
+                                </connections>
+                            </switch>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Custom Questions" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VFn-ms-nRq">
                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                 <nil key="textColor"/>
@@ -167,7 +184,6 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="zkM-Z6-VjF"/>
                         </subviews>
                         <color key="backgroundColor" red="0.94275085295129957" green="1" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -222,6 +238,10 @@
                         <outlet property="a3label" destination="HNc-gd-VoW" id="Ta7-6F-xDd"/>
                         <outlet property="a4label" destination="LWm-6w-4as" id="VPM-EU-59i"/>
                         <outlet property="qlabel" destination="jp4-jd-axW" id="n8A-77-kOV"/>
+                        <outlet property="switcha1" destination="zkM-Z6-VjF" id="i2Z-3X-4K0"/>
+                        <outlet property="switcha2" destination="Rtu-XM-YCs" id="S3G-UN-ael"/>
+                        <outlet property="switcha3" destination="Ict-Ph-VCE" id="WhY-hK-uYe"/>
+                        <outlet property="switcha4" destination="q1q-W7-1qK" id="bMt-0j-Sj0"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jM7-nT-8WI" userLabel="First Responder" sceneMemberID="firstResponder"/>
