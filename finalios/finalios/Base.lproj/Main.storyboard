@@ -55,6 +55,9 @@
                                 <rect key="frame" x="134" y="286" width="107" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Add New User"/>
+                                <connections>
+                                    <action selector="changeUser:" destination="fFN-Rc-9gF" eventType="touchUpInside" id="9H0-xh-epc"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="center" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gq8-Ou-zzX">
                                 <rect key="frame" x="107" y="369" width="160" height="30"/>
@@ -93,6 +96,9 @@
                             <constraint firstAttribute="trailingMargin" secondItem="wzN-0E-n2q" secondAttribute="trailing" constant="10" id="x0l-2P-6kl"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="userTF" destination="a7S-PQ-FOO" id="vXi-rp-jmd"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MVD-cU-5lk" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -591,7 +597,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="LrQ-Qr-cMS"/>
+        <segue reference="tVw-4Z-0Jv"/>
         <segue reference="mRQ-df-HNK"/>
     </inferredMetricsTieBreakers>
 </document>
