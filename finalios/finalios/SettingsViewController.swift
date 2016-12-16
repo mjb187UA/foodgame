@@ -10,6 +10,7 @@ import UIKit
 
 class SettingsViewController: UIViewController {
     
+    @IBOutlet weak var highscore: UILabel!
     @IBOutlet weak var userTF: UITextField!
     @IBOutlet weak var difficultySelector: UIPickerView!
     @IBOutlet weak var pickerLabel: UILabel!
@@ -29,12 +30,31 @@ class SettingsViewController: UIViewController {
         
         self.userTF.text = String(describing: array11[0])
         
+        let thehighscore = array11[0] as! String
+        
+        self.highscore.text = "HighScore: " + String(describing: array11[1])
     }
     
   override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
     
+    @IBAction func changeHS(_ sender: Any) {
+        let paths = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true)
+        let url1 = URL(fileURLWithPath: paths[0]).appendingPathComponent("user.plist")
+        
+        let array11 = NSMutableArray(contentsOf: url1)
+        
+        array11?.replaceObject(at: 1, with: String(0))
+        
+        DispatchQueue(label:"matthew.finalios").async {
+            if !((array11?.write(to: url1, atomically: true))!) {
+                print("Error writing plist to \(url1)")
+            }
+        }
+        
+        self.highscore.text = "HighScore: 0"
+    }
     @IBAction func changeUser(_ sender: Any) {
         let paths = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true)
         let url1 = URL(fileURLWithPath: paths[0]).appendingPathComponent("user.plist")

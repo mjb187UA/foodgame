@@ -10,6 +10,7 @@ import UIKit
 
 class HomeViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate {
     
+    @IBOutlet weak var homehighScore: UILabel!
     @IBOutlet weak var difficultySelector: UIPickerView!
     @IBOutlet weak var playButton: UIButton!
     
@@ -37,6 +38,13 @@ class HomeViewController: UIViewController, UIPickerViewDataSource, UIPickerView
         difficultySelector.dataSource = self
         difficultySelector.delegate = self
         playButton.setTitle("Play Easy", for: .normal)
+        
+        
+        let array2 = (NSArray(contentsOf: url2) as! Array<Any>)
+        
+        //let thehighscore = array2[1] as! String
+        
+        self.homehighScore.text = "HighScore: " + String(describing: array2[1])
     }
     
     override func didReceiveMemoryWarning() {

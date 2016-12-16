@@ -259,9 +259,26 @@ extension UIViewController {
     func hideKeyboardWhenTappedAround() {
         let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(UIViewController.dismissKeyboard))
         view.addGestureRecognizer(tap)
+        
+        NotificationCenter.default.addObserver(forName: NSNotification.Name.UIKeyboardWillShow, object: nil, queue: nil) {
+            
+            notification in
+            
+            print("\(notification.description)")
+            
+            // find the size of the keyboard
+            guard let keyboardSize = (notification.userInfo?[UIKeyboardFrameBeginUserInfoKey] as? NSValue)?.cgRectValue else {
+                print("ERROR: Unable to get keyboard size")
+                return
+            }
+            
+            // move the whole thing up
+            self.view.frame.origin.y = -keyboardSize.height + 130
+        }
     }
     
     func dismissKeyboard() {
         view.endEditing(true)
+        self.view.frame.origin.y = 0
     }
 }

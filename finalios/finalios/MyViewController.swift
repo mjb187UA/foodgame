@@ -130,5 +130,38 @@ class MyViewController: UIViewController{
     {
         counter -= 0.1
         timeLabel.text = String(Int(counter))
+        
+        /*if (counter == 0)
+        {
+            let paths = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true)
+            let url1 = URL(fileURLWithPath: paths[0]).appendingPathComponent("user.plist")
+            
+            let array11 = NSMutableArray(contentsOf: url1)
+            
+            
+            array11?.replaceObject(at: 2, with: String(correct))
+            array11?.replaceObject(at: 3, with: String(wrong))
+            
+            
+            let oldScore = array11?.object(at: 1) as! String
+            
+            let oldScore1 = Int(oldScore)
+            
+            if(oldScore1! < correct)
+            {
+                array11?.replaceObject(at: 1, with: String(correct))
+            }
+            
+            
+            
+            DispatchQueue(label:"matthew.finalios").async {
+                if !((array11?.write(to: url1, atomically: true))!) {
+                    print("Error writing plist to \(url1)")
+                }
+            }
+            print("I was ran")
+            let HomeVC = storyboard?.instantiateViewController(withIdentifier: "endGameViewController") as! endGameViewController
+            self.present(HomeVC, animated: true, completion: nil)
+        }*/
     }
 }
