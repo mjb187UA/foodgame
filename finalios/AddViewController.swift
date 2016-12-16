@@ -178,14 +178,6 @@ class AddViewController: UIViewController {
         array55?.write(to: url1, atomically: true)
         array66?.write(to: url1, atomically: true)*/
         
-        
-        print(array11)
-        print(array22)
-        print(array33)
-        print(array44)
-        print(array55)
-        print(array66)
-        
         print("ARRAY1:  \(array11?.count)")
         print("ARRAY2:  \(array22?.count)")
         print("ARRAY3:  \(array33?.count)")

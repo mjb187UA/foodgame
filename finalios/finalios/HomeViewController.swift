@@ -20,11 +20,18 @@ class HomeViewController: UIViewController, UIPickerViewDataSource, UIPickerView
         
         let paths = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true)
         let url1 = URL(fileURLWithPath: paths[0]).appendingPathComponent("questionList.plist")
+        let url2 = URL(fileURLWithPath: paths[0]).appendingPathComponent("user.plist")
         let array11 = NSMutableArray(contentsOf: url1)
+        let array12 = NSMutableArray(contentsOf: url2)
         
         if(array11 == nil)
         {
             check()
+        }
+        
+        if(array12 == nil)
+        {
+            check2()
         }
         
         difficultySelector.dataSource = self
@@ -136,4 +143,35 @@ class HomeViewController: UIViewController, UIPickerViewDataSource, UIPickerView
         
         print("I WAS RAN")
     }
+    
+    func check2()
+    {
+        let paths = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true)
+        let url1 = URL(fileURLWithPath: paths[0]).appendingPathComponent("user.plist")
+        
+        
+        let Qpath = Bundle.main.path(forResource: "user", ofType: "plist")
+        let questionArray = NSArray(contentsOfFile: Qpath!)
+        
+        let array1:NSMutableArray = questionArray as! NSMutableArray
+        
+        DispatchQueue(label:"matthew.finalios").async {
+            if !((array1.write(to: url1, atomically: true))) {
+                print("Error writing plist to \(url1)")
+            }
+        
+        let array11 = NSMutableArray(contentsOf: url1)
+            
+        array11?.replaceObject(at: 0, with: "user")
+        array11?.replaceObject(at: 1, with: "0")
+        array11?.replaceObject(at: 2, with: "0")
+        array11?.replaceObject(at: 3, with: "0")
+            
+        DispatchQueue(label:"matthew.finalios").async {
+            if !((array1.write(to: url1, atomically: true))) {
+                print("Error writing plist to \(url1)")
+            }
+        }
+    }
+}
 }
