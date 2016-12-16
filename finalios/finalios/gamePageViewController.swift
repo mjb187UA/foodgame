@@ -115,6 +115,33 @@ class gamePageViewController: UIPageViewController, UIPageViewControllerDataSour
         if(index > test.count-1) {
             print("No more questions!!!")
             
+            let paths = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true)
+            let url1 = URL(fileURLWithPath: paths[0]).appendingPathComponent("user.plist")
+            
+            let array11 = NSMutableArray(contentsOf: url1)
+            
+            
+            array11?.replaceObject(at: 2, with: String(right))
+            array11?.replaceObject(at: 3, with: String(wrong))
+            
+            
+            let oldScore = array11?.object(at: 1) as! String
+            
+            let oldScore1 = Int(oldScore)
+            
+            if(oldScore1! < right)
+            {
+                array11?.replaceObject(at: 1, with: String(right))
+            }
+            
+            
+            
+            DispatchQueue(label:"matthew.finalios").async {
+                if !((array11?.write(to: url1, atomically: true))!) {
+                    print("Error writing plist to \(url1)")
+                }
+            }
+            
             let HomeVC = storyboard?.instantiateViewController(withIdentifier: "endGameViewController") as! endGameViewController
             return HomeVC
         }

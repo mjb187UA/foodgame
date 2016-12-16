@@ -22,6 +22,8 @@ class AddViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.hideKeyboardWhenTappedAround()
+        // Do any additional setup after loading the view.
     }
 
     override func didReceiveMemoryWarning() {
@@ -185,14 +187,6 @@ class AddViewController: UIViewController {
         array55?.write(to: url1, atomically: true)
         array66?.write(to: url1, atomically: true)*/
         
-        
-        print(array11)
-        print(array22)
-        print(array33)
-        print(array44)
-        print(array55)
-        print(array66)
-        
         print("ARRAY1:  \(array11?.count)")
         print("ARRAY2:  \(array22?.count)")
         print("ARRAY3:  \(array33?.count)")
@@ -259,4 +253,15 @@ class AddViewController: UIViewController {
     }
     
     
+}
+
+extension UIViewController {
+    func hideKeyboardWhenTappedAround() {
+        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(UIViewController.dismissKeyboard))
+        view.addGestureRecognizer(tap)
+    }
+    
+    func dismissKeyboard() {
+        view.endEditing(true)
+    }
 }

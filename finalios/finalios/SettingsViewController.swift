@@ -10,6 +10,7 @@ import UIKit
 
 class SettingsViewController: UIViewController {
     
+    @IBOutlet weak var userTF: UITextField!
     @IBOutlet weak var difficultySelector: UIPickerView!
     @IBOutlet weak var pickerLabel: UILabel!
     
@@ -17,10 +18,36 @@ class SettingsViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        self.hideKeyboardWhenTappedAround()
+        let paths = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true)
+        let url1 = URL(fileURLWithPath: paths[0]).appendingPathComponent("user.plist")
+        
+        let array11 = (NSArray(contentsOf: url1) as! Array<Any>)
+        
+        let username = array11[0] as! String
+        
+        self.userTF.text = String(describing: array11[0])
+        
     }
     
-    override func didReceiveMemoryWarning() {
+  override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
+    }
+    
+    @IBAction func changeUser(_ sender: Any) {
+        let paths = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true)
+        let url1 = URL(fileURLWithPath: paths[0]).appendingPathComponent("user.plist")
+        
+        let array11 = NSMutableArray(contentsOf: url1)
+        
+        array11?.replaceObject(at: 0, with: self.userTF.text!)
+        
+        DispatchQueue(label:"matthew.finalios").async {
+            if !((array11?.write(to: url1, atomically: true))!) {
+                print("Error writing plist to \(url1)")
+            }
+        }
     }
     
     
@@ -120,3 +147,4 @@ class SettingsViewController: UIViewController {
         
     }
 }
+

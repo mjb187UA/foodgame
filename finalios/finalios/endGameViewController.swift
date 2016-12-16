@@ -10,13 +10,23 @@ import UIKit
 
 class endGameViewController: UIViewController {
 
+    @IBOutlet weak var wrongLabel: UILabel!
+    @IBOutlet weak var correctLabel: UILabel!
+    @IBOutlet weak var highscoreLabel: UILabel!
     @IBOutlet weak var testlabel: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        let pvc = self.
         
-        self.testlabel.text = String(pvc.right)
+        let paths = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true)
+        let url1 = URL(fileURLWithPath: paths[0]).appendingPathComponent("user.plist")
+        
+        let array11 = (NSArray(contentsOf: url1) as! Array<Any>)
+
+        self.testlabel.text = String(describing: array11[0])
+        self.highscoreLabel.text = "High Score: " + String(describing: array11[1])
+        self.correctLabel.text = "Correct: " + String(describing: array11[2])
+        self.wrongLabel.text = "Wrong: " + String(describing: array11[3])
+        
         // Do any additional setup after loading the view.
     }
 
