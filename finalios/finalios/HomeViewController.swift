@@ -40,11 +40,11 @@ class HomeViewController: UIViewController, UIPickerViewDataSource, UIPickerView
         playButton.setTitle("Play Easy", for: .normal)
         
         
-        let array2 = (NSArray(contentsOf: url2) as! Array<Any>)
+        //let array2 = (NSArray(contentsOf: url2) as! Array<Any>)
         
         //let thehighscore = array2[1] as! String
         
-        self.homehighScore.text = "HighScore: " + String(describing: array2[1])
+        //self.homehighScore.text = "HighScore: " + String(describing: array2[1])
     }
     
     override func didReceiveMemoryWarning() {
